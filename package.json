@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
+    "test:rtl": "vitest --config vitest.rtl.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

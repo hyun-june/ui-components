@@ -51,11 +51,14 @@ export default function ToastContainer() {
           key={item.id}
           className={cn(toastVariants({ variant: item.variant }))}
         >
-          <span className={cn(dotVariants({ variant: item.variant }))} />
+          <span
+            className={cn(dotVariants({ variant: item.variant }))}
+            data-testId="toast-dot"
+          />
           {item.icon && (
             <span className="shrink-0 text-base leading-none">{item.icon}</span>
           )}
-          <span className="flex-1 leading-snug">{item.message}</span>
+          <span className="flex-1">{item.message}</span>
         </div>
       ))}
     </div>
