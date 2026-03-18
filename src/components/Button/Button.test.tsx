@@ -1,11 +1,15 @@
+import { describe, expect, test, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { test, expect } from "vitest";
+import { userEvent } from "@testing-library/user-event";
 import Button from "./Button";
 
-test("button 컴포넌트 테스트", () => {
-  render(<Button />);
+describe("Button onClick Test", () => {
+  test("Button onClick 제대로 동작하는지 test", async () => {
+    const handleClick = vi.fn();
+    render(<Button onClick={handleClick}>Button</Button>);
 
-  const button = screen.getByText("버튼임");
-
-  expect(button).toBeInTheDocument();
+    const button = screen.getByText("Button");
+    await userEvent.click(button);
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
 });
