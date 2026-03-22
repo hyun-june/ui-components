@@ -36,7 +36,7 @@ const dotVariants = cva("w-[6px] h-[6px] rounded-full flex-shrink-0", {
   defaultVariants: { variant: "default" },
 });
 
-export default function ToastContainer() {
+export function ToastContainer() {
   const [toastList, setToastList] = useState<ToastItem[]>([]);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function ToastContainer() {
         >
           <span
             className={cn(dotVariants({ variant: item.variant }))}
-            data-testId="toast-dot"
+            data-testid="toast-dot"
           />
           {item.icon && (
             <span className="shrink-0 text-base leading-none">{item.icon}</span>
