@@ -1,4 +1,4 @@
-import Badge from "./Badge";
+import { Badge } from "./Badge";
 
 interface TagBadgeProps {
   tags: string[];
@@ -7,8 +7,8 @@ interface TagBadgeProps {
 const TagBadge = ({ tags }: TagBadgeProps) => {
   return (
     <>
-      {tags.map((tag) => (
-        <Badge key={tag} variant="tag">
+      {tags.map((tag, index) => (
+        <Badge key={`${tag}-${index}`} variant="tag">
           # {tag}
         </Badge>
       ))}

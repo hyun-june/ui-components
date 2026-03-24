@@ -1,7 +1,7 @@
-import { act, render, screen, waitFor } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { test, expect, vi } from "vitest";
-import ToastContainer from "./Toast";
 import { toast } from "../../utils/toast";
+import { ToastContainer } from "./Toast";
 
 describe("Toast UI 테스트", () => {
   describe("Toast Message 화면에 올바르게 나타나는지 테스트", () => {

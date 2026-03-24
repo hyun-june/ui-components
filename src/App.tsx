@@ -1,15 +1,11 @@
-import StatusBadge from "./components/Badge/StatusBadge";
-import TagBadge from "./components/Badge/TagBadge";
+import SuccessAnimation from "./components/animation/SuccessAnimation";
+import { ProjectCard } from "./components/Project/ProjectCard";
 
 function App() {
   return (
-    <div>
-      <StatusBadge status="recruiting" />
-      <StatusBadge status="closed" />
-      <StatusBadge status="auto" />
-      <StatusBadge status="approve" />
-      <StatusBadge status="deadline" />
-      <TagBadge tags={["처음", "두번째"]} />
+    <div className="flex h-screen items-center justify-center">
+      <SuccessAnimation />
+      {/* <ProjectCard /> */}
     </div>
   );
 }

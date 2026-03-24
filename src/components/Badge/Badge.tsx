@@ -31,7 +31,7 @@ interface BadgeProps
   children: React.ReactNode;
 }
 
-const Badge = ({ variant, size, className, ...props }: BadgeProps) => {
+export const Badge = ({ variant, size, className, ...props }: BadgeProps) => {
   return (
     <div
       className={cn(badgeVariants({ variant, size }), className)}
@@ -39,5 +39,3 @@ const Badge = ({ variant, size, className, ...props }: BadgeProps) => {
     />
   );
 };
-
-export default Badge;

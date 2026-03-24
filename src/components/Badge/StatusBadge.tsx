@@ -1,7 +1,6 @@
-import type React from "react";
-import Badge from "./Badge";
 import type { ComponentProps } from "react";
 import { LightningBoltIcon, LockClosedIcon } from "@radix-ui/react-icons";
+import { Badge } from "./Badge";
 
 type BadgeVariant = ComponentProps<typeof Badge>["variant"];
 
@@ -11,8 +10,8 @@ interface BadgeStatus {
   icon?: React.ReactNode;
 }
 
-const BADGE_STATUS = {
-  recruiting: { label: "모집중", type: "recruit" },
+export const BADGE_STATUS = {
+  recruit: { label: "모집중", type: "recruit" },
   closed: { label: "모집완료", type: "closed" },
   auto: { label: "즉시 참여 가능", type: "auto", icon: <LightningBoltIcon /> },
   approve: {
