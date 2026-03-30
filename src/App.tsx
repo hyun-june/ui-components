@@ -6,7 +6,7 @@ function App() {
     <div className="flex h-screen items-center justify-center">
       <SuccessAnimation />
       {/* <ProjectCard /> */}
-      <div>test/main</div>
+      <div>test/main-branch</div>
     </div>
   );
 }
